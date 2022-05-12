@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+.card{
+            box-shadow: 0 4px 8px 0
+    blue;
+            transition:0.3s;
+            width:50%;
+            height:50%;
+            font-size:25px;
+            display: flex;
+            align-items: center;
+            margin:auto;
+            padding:10px;
+            
+            
+           
+        }
+        .card:hover{
+            box-shadow: 0 8px 16px 0 
+            rgba(0,0,0,0.2) ;
+        }
+        .container{
+            padding: 2px 16px;
+        }
+        .navb
+        {
+            padding:15px;
+            background-color:darkblue;
+            color:white;
+            text-align:center;
+            font-size:50px;
+        }
+        .button:hover
+        {
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navb">
+        Forgot password
+    </nav>
+
+    <br><br><br><br>
+<div class="card">
+    <div class="container">
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder:"abc@gmail.com">
+        <br><br>
+    <label for="pass1">Create new password:</label>
+    <input type="password" id="pass1">
+    <br><br>
+    <label for="pass2">re-enter new password:</label>
+    <input type="password" id="pass2">
+    <br><br>
+    <button class="button" onclick="chkPasswords()">Change password</button>
+</div>
+</div>
+
+<script>
+    function chkPasswords() {
+var init = document.getElementById("pass1");
+var sec = document.getElementById("pass2");
+if (init.value == "") {
+alert("You did not enter a password \n" +
+"Please enter one now");
+return false;
+}
+if (init.value != sec.value) {
+alert("The two passwords you entered are not the same \n" +
+"Please re-enter both now");
+return false;
+} else
+return true;
+}
+
+</script>
+
+</body>
+</html>
